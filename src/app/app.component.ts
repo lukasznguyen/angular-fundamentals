@@ -7,9 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string;
-  isHappy: boolean = false;
-  numberOne: number = 1;
-  numberTwo: number = 2;
+  name: string = 'Lucas';
+  logo: string = 'assets/images/logo.svg';
 
   constructor() {
     this.title = 'Ultimate Angular';
