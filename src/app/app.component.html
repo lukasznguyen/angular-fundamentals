@@ -1,8 +1,17 @@
 <div class="app">
-  <button 
-    (click)="handleClick(username.value)">
-    Get value
-  </button>
-  <input type="text" #username>
-  <div>{{ name }}</div>
+  <input 
+    type="text"
+    [value]="name"
+    (input)="handleChange($event)">
+
+  <!-- Should work
+  <template [ngIf]="name.length > 2">
+    <div>
+      Searching for... {{ name }}
+    </div>  
+  </template> -->
+
+  <div *ngIf="name.length > 2">
+    Searching for... {{ name }}
+  </div>
 </div>
