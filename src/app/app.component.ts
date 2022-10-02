@@ -12,11 +12,7 @@ export class AppComponent {
     this.name = 'Skywalker';
   }
 
-  handleInput(event: any) {
-    this.name = event.target.value;
-  }
-
-  handleBlur(event: any) {
-    this.name = event.target.value;
+  handleChange(value: string) {
+    this.name = value;
   }
 }
