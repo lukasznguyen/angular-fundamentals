@@ -1,7 +1,12 @@
 <div class="app">
-  <h1 [innerHTML]="title"></h1>
-  <h1>{{ title }}</h1>
-  <img [src]="logo" width="300" height="100">
-  <input type="text" [value]="name">
+  <button 
+    (click)="handleClick()">
+    Change name
+  </button>
+  <input 
+    type="text" 
+    [value]="name"
+    (input)="handleInput($event)"
+    (blur)="handleBlur($event)">
   <div>{{ name }}</div>
 </div>
