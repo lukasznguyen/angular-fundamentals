@@ -1,17 +1,14 @@
 <div class="app">
-  <input 
-    type="text"
-    [value]="name"
-    (input)="handleChange($event)">
-
-  <!-- Should work
-  <template [ngIf]="name.length > 2">
-    <div>
-      Searching for... {{ name }}
-    </div>  
-  </template> -->
-
-  <div *ngIf="name.length > 2">
-    Searching for... {{ name }}
-  </div>
+  <h3>Airline Passengers</h3>
+  <ul>
+    <ng-template ngFor let-passenger let-i="index" [ngForOf]="passengers">
+      <li>{{ i }}: {{ passenger.fullname }}</li>
+    </ng-template>
+  </ul>
+  <h3>Airline Passengers</h3>
+  <ul>
+    <li *ngFor="let passenger of passengers; let i = index">
+      {{ i }}: {{ passenger.fullname }}
+    </li>
+  </ul>
 </div>
