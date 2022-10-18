@@ -1,1 +1,15 @@
-<div>Detail component</div>
+<div>
+  <span class="status" [class.checked-in]="detail.checkedIn"></span>
+  {{ detail.fullname }}
+  <div class="date">
+    Check in date:
+    {{
+    detail.checkInDate
+      ? (detail.checkInDate | date: "yMMMMd" | uppercase)
+      : "Not checked in"
+    }}
+  </div>
+  <div class="children">
+    Children: {{ detail.children?.length || 0 }}
+  </div>
+</div>
