@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { Passenger } from '../../models/passenger.interface';
+import {Passenger} from '../../models/passenger.interface';
 
 @Component({
   selector: 'passenger-dashboard',
@@ -10,7 +10,8 @@ import { Passenger } from '../../models/passenger.interface';
 export class PassengerDashboardComponent implements OnInit {
   passengers: Passenger[];
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit(): void {
     console.log('ngOnInit');
@@ -28,8 +29,8 @@ export class PassengerDashboardComponent implements OnInit {
         checkedIn: false,
         checkInDate: null,
         children: [
-          { name: 'Tedd', age: 12 },
-          { name: 'Chloe', age: 7 },
+          {name: 'Tedd', age: 12},
+          {name: 'Chloe', age: 7},
         ],
       },
       {
@@ -44,7 +45,7 @@ export class PassengerDashboardComponent implements OnInit {
         fullname: 'Louise',
         checkedIn: true,
         checkInDate: 1488412800000,
-        children: [{ name: 'Jessica', age: 1 }],
+        children: [{name: 'Jessica', age: 1}],
       },
       {
         id: 5,
